@@ -1,0 +1,1146 @@
+{
+	"info": {
+		"_postman_id": "6f1aeb03-9265-4842-bbdc-7dfa532fb9bf",
+		"name": "CTT - SALAO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Turno",
+			"item": [
+				{
+					"name": "Turno Manha Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"tipoTurno\": 0,\r\n        \"entradaSemana\" : \"1900-01-01T08:00:00\",\r\n        \"saidaSemana\" : \"1900-01-01T12:00:00\",\r\n        \"entradaSabado\" : \"1900-01-01T08:00:00\",\r\n        \"saidaSabado\" : \"1900-01-01T12:00:00\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turno",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turno Tarde Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n\r\n        \"tipoTurno\": 1,\r\n        \"entradaSemana\" : \"1900-01-01T12:00:00\",\r\n        \"saidaSemana\" : \"1900-01-01T18:00:00\",\r\n        \"entradaSabado\" : \"1900-01-01T12:00:00\",\r\n        \"saidaSabado\" : \"1900-01-01T18:00:00\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turno",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turno"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turno Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "    {\r\n        \"id\": \"10acfdca-b328-4364-e849-08d8db465c2c\",\r\n        \"tipoTurno\": 0,\r\n        \"entradaSemana\": \"1900-01-01T08:00:00\",\r\n        \"saidaSemana\": \"1900-01-01T12:00:00\",\r\n        \"entradaSabado\": \"1900-01-01T08:00:00\",\r\n        \"saidaSabado\": \"1900-01-01T12:04:00\"\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/turno/10acfdca-b328-4364-e849-08d8db465c2c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turno",
+								"10acfdca-b328-4364-e849-08d8db465c2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turno Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/turno/10acfdca-b328-4364-e849-08d8db465c2c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turno",
+								"10acfdca-b328-4364-e849-08d8db465c2c"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Turno Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/turno/10acfdca-b328-4364-e849-08d8db465c2c",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"turno",
+								"10acfdca-b328-4364-e849-08d8db465c2c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servico",
+			"item": [
+				{
+					"name": "Servico Corte Cabelo Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Corte de Cabelo\",\r\n        \"MinutosParaExecucao\" : 59,\r\n        \"Preco\" : 130\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Manicure Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Manicure\",\r\n        \"MinutosParaExecucao\" : 59,\r\n        \"Preco\" : 20\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Pedicure Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Pedicure\",\r\n        \"MinutosParaExecucao\" : 59,\r\n        \"Preco\" : 30\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Limpeza de pele Post - incluir Copy",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Limpeza de pele\",\r\n        \"MinutosParaExecucao\" : 59,\r\n        \"Preco\" : 100\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": \"c23f417f-228b-4ac9-c279-08d8db472a2a\",\r\n        \"nome\": \"Limpeza de pele\",\r\n        \"minutosParaExecucao\": 59,\r\n        \"preco\": 120,\r\n        \"servicoSolicitados\": null,\r\n        \"funcionarioServicos\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servico/c23f417f-228b-4ac9-c279-08d8db472a2a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico",
+								"c23f417f-228b-4ac9-c279-08d8db472a2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/servico/c23f417f-228b-4ac9-c279-08d8db472a2a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico",
+								"c23f417f-228b-4ac9-c279-08d8db472a2a"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/servico/c23f417f-228b-4ac9-c279-08d8db472a2a",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servico",
+								"c23f417f-228b-4ac9-c279-08d8db472a2a"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Endereco",
+			"item": [
+				{
+					"name": "Endereco Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Logradouro\":  \"Rua dos bobos\",\r\n        \"CEP\" : \"12345010\",\r\n        \"Bairro\" :  \"Vila dos Devs\",\r\n        \"Cidade\" : \"São Paulo\",\r\n        \"UF\" : \"SP\",\r\n        \"Numero\" :  \"0\",\r\n        \"Complemento\" : null\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/endereco",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"endereco"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endereco Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"06e7defb-55e1-40ff-78be-08d8db488ac0\",\r\n        \"logradouro\": \"Rua dos bobos\",\r\n        \"cep\": \"12345010\",\r\n        \"bairro\": \"Vila dos Devs\",\r\n        \"cidade\": \"São Paulo\",\r\n        \"uf\": \"SP\",\r\n        \"numero\": \"00\",\r\n        \"complemento\": null,\r\n        \"funcionarios\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/endereco/06e7defb-55e1-40ff-78be-08d8db488ac0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"endereco",
+								"06e7defb-55e1-40ff-78be-08d8db488ac0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endereco Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/endereco/4dc9a5e4-f95a-40dd-78bf-08d8db488ac0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"endereco",
+								"4dc9a5e4-f95a-40dd-78bf-08d8db488ac0"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Endereco Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/endereco/06e7defb-55e1-40ff-78be-08d8db488ac0",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"endereco",
+								"06e7defb-55e1-40ff-78be-08d8db488ac0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario",
+			"item": [
+				{
+					"name": "Funcionario Maria Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Matricula\": 1,\r\n        \"Nome\":  \"Maria\",\r\n        \"Telefone\" : \"999999999\",\r\n        \"Cargo\" :  0,\r\n        \"turnoId\" : \"29227270-BA22-41E8-E84B-08D8DB465C2C\",\r\n        \"EnderecoId\" : \"4dc9a5e4-f95a-40dd-78bf-08d8db488ac0\"        \r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Joana Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Matricula\": 1,\r\n        \"Nome\":  \"Joana\",\r\n        \"Telefone\" : \"999999997\",\r\n        \"Cargo\" :  2,\r\n        \"turnoId\" : \"29227270-BA22-41E8-E84B-08D8DB465C2C\",\r\n        \"EnderecoId\" : \"4dc9a5e4-f95a-40dd-78bf-08d8db488ac0\"        \r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Rosana Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Matricula\": 1,\r\n        \"Nome\":  \"Rosana\",\r\n        \"Telefone\" : \"999999998\",\r\n        \"Cargo\" :  1,\r\n        \"turnoId\" : \"A4A77B69-35EB-4915-E84C-08D8DB465C2C\",\r\n        \"EnderecoId\" : \"4dc9a5e4-f95a-40dd-78bf-08d8db488ac0\"        \r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id\": \"72f9b667-9676-40d7-4595-08d8db4a64f1\",\r\n        \"matricula\": 1,\r\n        \"nome\": \"Joana1\",\r\n        \"telefone\": \"999999997\",\r\n        \"cargo\": 2,\r\n        \"turnoId\": \"29227270-ba22-41e8-e84b-08d8db465c2c\",\r\n        \"turno\": null,\r\n        \"enderecoId\": \"4dc9a5e4-f95a-40dd-78bf-08d8db488ac0\",\r\n        \"endereco\": null,\r\n        \"servicoSolicitados\": null,\r\n        \"funcionarioServicos\": null\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario/72f9b667-9676-40d7-4595-08d8db4a64f1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario",
+								"72f9b667-9676-40d7-4595-08d8db4a64f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario/72f9b667-9676-40d7-4595-08d8db4a64f1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario",
+								"72f9b667-9676-40d7-4595-08d8db4a64f1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/funcionario/72f9b667-9676-40d7-4595-08d8db4a64f1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionario",
+								"72f9b667-9676-40d7-4595-08d8db4a64f1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Funcionario Servico",
+			"item": [
+				{
+					"name": "Funcionario Servico Maria Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"FuncionarioId\": \"9802275C-8B6E-4DD6-4593-08D8DB4A64F1\",\r\n        \"ServicoId\":  \"4D43CD15-1928-4618-C276-08D8DB472A2A\"\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Joana Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"FuncionarioId\": \"669F8828-548F-486C-4596-08D8DB4A64F1\",\r\n        \"ServicoId\":  \"9D932DE6-5853-48BF-C27A-08D8DB472A2A\"\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Rosana Manicure  Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"FuncionarioId\": \"BF4F187B-1C6E-4F06-4594-08D8DB4A64F1\",\r\n        \"ServicoId\":  \"C5531F32-8FCB-4D03-C277-08D8DB472A2A\"\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Rosana Pedicure Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"FuncionarioId\": \"BF4F187B-1C6E-4F06-4594-08D8DB4A64F1\",\r\n        \"ServicoId\":  \"FDA806D3-C1E7-4C9B-C278-08D8DB472A2A\"\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"bcc79002-8899-436e-9cb3-43bdf4bce118\",\r\n    \"funcionarioId\": \"669f8828-548f-486c-4596-08d8db4a64f1\",\r\n    \"servicoId\": \"9d932de6-5853-48bf-c27a-08d8db472a2a\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico/bcc79002-8899-436e-9cb3-43bdf4bce118",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico",
+								"bcc79002-8899-436e-9cb3-43bdf4bce118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico/bcc79002-8899-436e-9cb3-43bdf4bce118",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico",
+								"bcc79002-8899-436e-9cb3-43bdf4bce118"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Funcionario Servico Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/funcionarioServico/bcc79002-8899-436e-9cb3-43bdf4bce118",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"funcionarioServico",
+								"bcc79002-8899-436e-9cb3-43bdf4bce118"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "Cliente Thamirys Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Thamirys\",\r\n        \"Telefone\" : \"999999999\",\r\n        \"CPF\" :  \"12345678901\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Thaise Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"Nome\":  \"Thaise\",\r\n        \"Telefone\" : \"999999998\",\r\n        \"CPF\" :  \"12345678902\"\r\n }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/cliente",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"cliente"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"35ebf12f-a020-4aa8-640d-08d8db538cb1\",\r\n    \"nome\": \"Thaise 222\",\r\n    \"telefone\": \"999999998\",\r\n    \"cpf\": \"12345678902\",\r\n    \"agendamentos\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/cliente/35ebf12f-a020-4aa8-640d-08d8db538cb1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"cliente",
+								"35ebf12f-a020-4aa8-640d-08d8db538cb1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/cliente/35ebf12f-a020-4aa8-640d-08d8db538cb1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"cliente",
+								"35ebf12f-a020-4aa8-640d-08d8db538cb1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Cliente Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/cliente/35ebf12f-a020-4aa8-640d-08d8db538cb1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"cliente",
+								"35ebf12f-a020-4aa8-640d-08d8db538cb1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Servico Solicitado",
+			"item": [
+				{
+					"name": "Servico Solicitado Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"FuncionarioId\": \"9802275C-8B6E-4DD6-4593-08D8DB4A64F1\",\r\n        \"ServicoId\":  \"4D43CD15-1928-4618-C276-08D8DB472A2A\",\r\n        \"Status\": 0,\r\n        \"DataServico\": \"2021-03-01T16:00:00\",\r\n        \"Preco\":130.00\r\n }\r\n\r\n    ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servicosolicitado",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servicosolicitado"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Solictado Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": \"531ef875-8b54-4c67-81fd-08d8db5226ed\",\r\n    \"servicoId\": \"4d43cd15-1928-4618-c276-08d8db472a2a\",\r\n    \"servico\": null,\r\n    \"funcionarioId\": \"9802275c-8b6e-4dd6-4593-08d8db4a64f1\",\r\n    \"funcionario\": null,\r\n    \"status\": 0,\r\n    \"dataServico\": \"2021-03-01T18:00:00\",\r\n    \"preco\": 130.00,\r\n    \"agendamentos\": null\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/servicoSolicitado/531ef875-8b54-4c67-81fd-08d8db5226ed",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servicoSolicitado",
+								"531ef875-8b54-4c67-81fd-08d8db5226ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Solictado Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/servicoSolicitado/531ef875-8b54-4c67-81fd-08d8db5226ed",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servicoSolicitado",
+								"531ef875-8b54-4c67-81fd-08d8db5226ed"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Servico Solictado Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/servicoSolicitado/531ef875-8b54-4c67-81fd-08d8db5226ed",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"servicoSolicitado",
+								"531ef875-8b54-4c67-81fd-08d8db5226ed"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agendamento",
+			"item": [
+				{
+					"name": "Agendameto Post - incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"ClienteId\": \"b530d124-ef22-4321-640c-08d8db538cb1\",\r\n        \"ServicoSolicitadoId\":  \"95F3420E-C9A1-4BEE-81FC-08D8DB5226ED\",\r\n        \"DataAgendamento\": \"2021-03-01T16:00:00\",\r\n        \"Anotacao\": \"Via API\",\r\n        \"Status\":0\r\n }\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/agendamento",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendameto Servico Put - alterar",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": " {\r\n        \"id\": \"e2855689-2819-4f4b-cd7f-08d8db561122\",\r\n        \"clienteId\": \"b530d124-ef22-4321-640c-08d8db538cb1\",\r\n        \"cliente\": null,\r\n        \"servicoSolicitadoId\": \"95f3420e-c9a1-4bee-81fc-08d8db5226ed\",\r\n        \"servicoSolicitado\": {\r\n            \"id\": \"95f3420e-c9a1-4bee-81fc-08d8db5226ed\",\r\n            \"servicoId\": \"4d43cd15-1928-4618-c276-08d8db472a2a\",\r\n            \"servico\": {\r\n                \"id\": \"4d43cd15-1928-4618-c276-08d8db472a2a\",\r\n                \"nome\": \"Corte de Cabelo\",\r\n                \"minutosParaExecucao\": 59,\r\n                \"preco\": 130.00,\r\n                \"servicoSolicitados\": [],\r\n                \"funcionarioServicos\": null\r\n            },\r\n            \"funcionarioId\": \"9802275c-8b6e-4dd6-4593-08d8db4a64f1\",\r\n            \"funcionario\": null,\r\n            \"status\": 0,\r\n            \"dataServico\": \"2021-03-01T16:00:00\",\r\n            \"preco\": 130.00,\r\n            \"agendamentos\": []\r\n        },\r\n        \"dataAgendamento\": \"2021-03-01T11:00:00\",\r\n        \"dataChegada\": \"0001-01-01T00:00:00\",\r\n        \"anotacao\": \"Via API\",\r\n        \"status\": 0\r\n    }",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:5001/api/agendamentoe2855689-2819-4f4b-cd7f-08d8db561122",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"agendamentoe2855689-2819-4f4b-cd7f-08d8db561122"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendameto Servico Get - selecionar",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/agendamento/e2855689-2819-4f4b-cd7f-08d8db561122",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"agendamento",
+								"e2855689-2819-4f4b-cd7f-08d8db561122"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Agendameto Servico Delete - excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:5001/api/agendamento/4563b858-3248-427b-10bd-08d8db55897f",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "5001",
+							"path": [
+								"api",
+								"agendamento",
+								"4563b858-3248-427b-10bd-08d8db55897f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
